@@ -6,10 +6,13 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity /*implements View.OnClickListener*/{
 
@@ -30,6 +33,43 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         //tv = (TextView) findViewById(R.id.textView4);
         //btnSimple = (Button) findViewById(R.id.button);
         //btnSimple.setOnClickListener(this);
+
+        Switch switch1 = (Switch) findViewById(R.id.switch1);
+        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                ImageView iv = (ImageView) findViewById(R.id.imgCam1);
+                if(isChecked){iv.setImageResource(R.drawable.camara);}
+                else{iv.setImageDrawable(null);}
+            }
+        });
+
+        Switch switch2 =(Switch) findViewById(R.id.switch2);
+        switch2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                ImageView iv = (ImageView) findViewById(R.id.imgLuz1);
+                if(isChecked){iv.setImageResource(R.drawable.luzon);}
+                else{iv.setImageResource(R.drawable.luzoff);}
+            }
+        });
+/*
+        ToggleButton toggle1 = (ToggleButton) findViewById(R.id.toggleButton1);
+        toggle1.setOnCheckedChangeListener ( new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                ImageView iv = (ImageView) findViewById(R.id.imgCam2);
+                if(isChecked){iv.setImageResource(R.drawable.camara);}
+                else{iv.setImageDrawable(null);}
+            }
+        });*/
+/*
+        ToggleButton toggle2 = (ToggleButton) findViewById(R.id.toggleButton2);
+        toggle2.setOnCheckedChangeListener ( new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                ImageView iv = (ImageView) findViewById(R.id.imgLuz2);
+                if(isChecked){iv.setImageResource(R.drawable.luzon);}
+                else{iv.setImageResource(R.drawable.luzoff);}
+            }
+        });
+*/
     }
 
     public void onClick(View v) {
@@ -94,45 +134,35 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         char[] letraDni = {
                 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D',  'X',  'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'
         };
-
         String num= "";
         int ind = 0;
-
         // boolean que nos indicara si es un dni correcto o no
         boolean valido;
-
         // existen dnis con 7 digitos numericos, si fuese el caso
         // le añado un cero al principio
         if(dniAComprobar.length() == 8) {
             dniAComprobar = "0" + dniAComprobar;
         }
-
         // compruebo que el 9º digito es una letra
         if (!Character.isLetter(dniAComprobar.charAt(8))) {
             return false;
         }
-
         // compruebo su longitud que sea 9
         if (dniAComprobar.length() != 9){
             return false;
         }
-
         // Compruebo que lo 8 primeros digitos sean numeros
         for (int i=0; i<8; i++) {
-
             if(!Character.isDigit(dniAComprobar.charAt(i))){
                 return false;
             }
             // si es numero, lo recojo en un String
             num += dniAComprobar.charAt(i);
         }
-
         // paso a int el string donde tengo el numero del dni
         ind = Integer.parseInt(num);
-
         // calculo la posición de la letra en el array que corresponde a este dni
         ind %= 23;
-
         // verifico que la letra del dni corresponde con la del array
         if ((Character.toUpperCase(dniAComprobar.charAt(8))) != letraDni[ind]){
             return false;
@@ -142,17 +172,20 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
     }
 
     public void changeImg(View v){
+        /*
         ImageView iv = (ImageView) findViewById(R.id.imgFoto);
         switch (v.getId()){
             case R.id.buttonBing:
-                iv.source
+                iv.setImageResource(R.drawable.bing);
                 break;
             case R.id.buttonGoogle:
-
+                iv.setImageResource(R.drawable.google);
                 break;
             case R.id.buttonYahoo:
-
+                iv.setImageResource(R.drawable.yahoo);
                 break;
         }
+        */
     }
+
 }
