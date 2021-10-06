@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Actividad 2"
+        android:onClick="actividad02"
         app:layout_constraintStart_toStartOf="@+id/actividad01"
         app:layout_constraintTop_toBottomOf="@+id/actividad01" />
 
@@ -32,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Actividad 3"
+        android:onClick="actividad03"
         app:layout_constraintStart_toStartOf="@+id/actividad02"
         app:layout_constraintTop_toBottomOf="@+id/actividad02" />
 
@@ -41,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Actividad 4"
+        android:onClick="actividad04"
         app:layout_constraintStart_toStartOf="@+id/actividad03"
         app:layout_constraintTop_toBottomOf="@+id/actividad03" />
 
@@ -51,6 +54,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="50dp"
         android:text="Salir"
+        android:onClick="salir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

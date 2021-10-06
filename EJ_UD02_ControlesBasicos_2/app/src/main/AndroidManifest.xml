@@ -10,15 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EJ_UD02_ControlesBasicos_2">
         <activity
+            android:name=".actividad03_2"
+            android:exported="true" />
+        <activity
+            android:name=".actividad03_1"
+            android:exported="true" />
+        <activity
+            android:name=".actividad_02_R"
+            android:exported="true" />
+        <activity
+            android:name=".actividad02_S"
+            android:exported="true" />
+        <activity
             android:name=".actividad01_C"
             android:exported="true" />
         <activity
             android:name=".actividad01_NA"
             android:exported="true" />
-        <activity
-            android:name=".ui.login.Actividad01_NombreYApellidos"
-            android:exported="true"
-            android:label="@string/title_activity_actividad01_nombre_yapellidos" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

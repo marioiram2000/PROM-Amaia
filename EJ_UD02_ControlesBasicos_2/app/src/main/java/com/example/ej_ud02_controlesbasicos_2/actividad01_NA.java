@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class actividad01_NA extends AppCompatActivity {
 
@@ -15,8 +16,8 @@ public class actividad01_NA extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actividad01_na);
-        name = (EditText) findViewById(R.id.name);
-        lastname = (EditText) findViewById(R.id.lastname);
+        name = findViewById(R.id.name);
+        lastname = findViewById(R.id.lastname);
 
     }
 
@@ -36,7 +37,15 @@ public class actividad01_NA extends AppCompatActivity {
                                      Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 111 && resultCode == RESULT_OK) {
-            Boolean res = data.getExtras().getBoolean("aceptada");
+            Boolean aceptada = data.getExtras().getBoolean("aceptada");
+            TextView tv = findViewById(R.id.textView);
+            if(aceptada){
+                tv.setText(tv.getText()+" ACEPTADO");
+                name.setText("");
+                lastname.setText("");
+            }else{
+                tv.setText(tv.getText()+" RECHAZADO");
+            }
         }
     }
 }
