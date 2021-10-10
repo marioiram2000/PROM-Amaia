@@ -22,9 +22,11 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView7"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
-        app:layout_constraintTop_toTopOf="@+id/textView7" />
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonLastame"
+        app:layout_constraintTop_toTopOf="@+id/textView7"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView7"
@@ -47,13 +49,97 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/editTextTextPersonLastame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
         app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toTopOf="@+id/textView8" />
+        app:layout_constraintTop_toTopOf="@+id/textView8"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Sexo:"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonLastame" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="165dp"
+        android:layout_height="101dp"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonLastame">
+
+        <RadioButton
+            android:id="@+id/radioButtonMasculino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masculino" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFemenino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femenino" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aficiones:"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMusica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Musica"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <CheckBox
+        android:id="@+id/checkBoxLectura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lectura"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxMusica"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxMusica" />
+
+    <CheckBox
+        android:id="@+id/checkBoxDeporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deportes"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxLectura"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxLectura" />
+
+    <CheckBox
+        android:id="@+id/checkBoxViajar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Viajar"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxDeporte"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxDeporte" />
+
+    <Button
+        android:id="@+id/buttonEviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+        android:text="Enviar"
+        android:onClick="enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

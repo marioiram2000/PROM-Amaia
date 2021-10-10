@@ -2,6 +2,7 @@ package com.example.ej_ud02_controlesbasicos_2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -16,26 +17,44 @@ public class actividad02_S extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        aciertos = 0;
-        fallos = 0;
         setContentView(R.layout.activity_actividad02_s);
+
+        Bundle bundle = getIntent().getExtras();
+        if(bundle==null || bundle.isEmpty()){
+            aciertos = 0;
+            fallos = 0;
+        }else{
+            aciertos = bundle.getInt("aciertos");
+            fallos = bundle.getInt("fallos");
+        }
+        TextView tvr = findViewById(R.id.textView5);
+        tvr.setText("Has acertado "+aciertos+" y fallado "+fallos);
         sacarNums();
     }
 
     public void comprobarResultado(View v){
+
         EditText et3 = findViewById(R.id.editTextNumber3);
-        if(!et3.getText().equals("")){
+        if(et3.getText()!=null && !et3.getText().equals("")){
             int result = Integer.parseInt(et3.getText().toString());
-            TextView tvr = findViewById(R.id.textView5);
+            String c;
             if(result == (n1+n2)){
                 aciertos ++;
+                c = "CORRECTO";
             }else{
                 fallos ++;
+                c = "INCORRECTO";
             }
             et3.setText("");
-            tvr.setText("Has acertado "+aciertos+" y fallado "+fallos);
-            sacarNums();
+
+            Intent intent = new Intent(this, actividad_02_R.class);
+            intent.putExtra("correcto", c);
+            intent.putExtra("aciertos", aciertos);
+            intent.putExtra("fallos", fallos);
+            startActivity(intent);
         }
+
+
     }
 
     private void sacarNums(){

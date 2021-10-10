@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EJ_UD02_ControlesBasicos_2">
         <activity
+            android:name=".actividad04_2"
+            android:exported="true" />
+        <activity
+            android:name=".actividad04_1"
+            android:exported="true" />
+        <activity
             android:name=".actividad03_2"
             android:exported="true" />
         <activity

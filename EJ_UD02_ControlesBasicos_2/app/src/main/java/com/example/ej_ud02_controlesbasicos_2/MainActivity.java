@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void actividad03(View view) {
-        Intent intent = new Intent(this, actividad02_S.class);
+        Intent intent = new Intent(this, actividad03_1.class);
         startActivity(intent);
     }
 
     public void actividad04(View view) {
-        Intent intent = new Intent(this, actividad02_S.class);
+        Intent intent = new Intent(this, actividad04_1.class);
         startActivity(intent);
     }
 
