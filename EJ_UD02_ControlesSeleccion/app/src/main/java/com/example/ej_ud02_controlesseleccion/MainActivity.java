@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openActividad2(View v){
-        Intent intent = new Intent(this, Actividad1.class);
+        Intent intent = new Intent(this, Actividad2.class);
         startActivity(intent);
     }
 
     public void openActividad3(View v){
-        Intent intent = new Intent(this, Actividad1.class);
+        Intent intent = new Intent(this, Actividad3.class);
         startActivity(intent);
     }
 }
