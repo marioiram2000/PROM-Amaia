@@ -1,1 +1,1 @@
-https://github.com/marioiram2000/PROM-Amaia/tree/main/EJ_UD02_controlesBasicos
+https://github.com/marioiram2000/PROM-Amaia/tree/main/EJ_UD02_ControlesSeleccion
