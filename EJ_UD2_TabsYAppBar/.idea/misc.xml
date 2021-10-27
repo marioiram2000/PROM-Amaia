@@ -4,7 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.296195652173913" />
+        <entry key="app/src/main/res/layout/activity_tabs_app_bar.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/layout/fragment_tabs_app_bar.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/layout/pestana_chats.xml" value="0.35733695652173914" />
+        <entry key="app/src/main/res/layout/pestana_contactos.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/layout/pestana_llamadas.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/menu/menu_main.xml" value="0.3651041666666667" />
       </map>
     </option>
   </component>
