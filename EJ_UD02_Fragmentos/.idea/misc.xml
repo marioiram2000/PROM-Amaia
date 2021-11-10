@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/layout/fragment_detalle.xml" value="0.35643115942028986" />
         <entry key="app/src/main/res/layout/fragment_listado.xml" value="0.35643115942028986" />
         <entry key="app/src/main/res/layout/listitem_correo.xml" value="0.35643115942028986" />
+        <entry key="app/src/main/res/layout/listitem_libro.xml" value="0.1" />
       </map>
     </option>
   </component>

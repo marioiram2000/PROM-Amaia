@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,9 +17,10 @@ public class FragmentDetalle extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_detalle, container,false);
     }
-    public void mostrarDetalle (String texto) {
-        TextView txtDetalle =
-                (TextView)getView().findViewById(R.id.txtDetalle);
-        txtDetalle.setText(texto);
+    public void mostrarDetalle (Libro l) {
+        ImageView imageView = (ImageView) getView().findViewById(R.id.imagenLibro);
+        imageView.setImageResource(l.getImagen());
+        TextView txtDetalle = (TextView) getView().findViewById(R.id.txtDetalle);
+        txtDetalle.setText(l.toString());
     }
 }
