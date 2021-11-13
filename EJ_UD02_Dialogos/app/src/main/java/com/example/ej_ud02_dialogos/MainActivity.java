@@ -59,19 +59,27 @@ public class MainActivity extends AppCompatActivity implements DialogLogin.OnDia
         startActivity(intent);
     }
 
-    public void salir(View view) {
-        new AlertDialog.Builder(this)
-            .setIcon(android.R.drawable.ic_dialog_alert)
-            .setTitle("Salir")
-            .setMessage("¿Estás seguro de querer salir de la aplicación?")
-            .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    finish();
-                }
+    public void exitConfirmation(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setIcon(android.R.drawable.ic_dialog_alert);
+        builder.setTitle("Salir");
+        builder.setMessage("¿Estás seguro de querer salir de la aplicación?");
+        builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
 
-            })
-            .setNegativeButton("No", null)
-            .show();
+                });
+        builder.setNegativeButton("No", null);
+        builder.show();
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+    public void salir(View view) {
+        exitConfirmation();
+    }
+    public void onBackPressed(){
+        exitConfirmation();
     }
 }
