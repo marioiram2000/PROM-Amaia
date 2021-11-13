@@ -4,12 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.location.Address;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity  implements DialogLogin.OnDialogoConfirmacionListener{
+public class MainActivity extends AppCompatActivity implements DialogLogin.OnDialogoConfirmacionListener {
 
     private DialogLogin dialogLogin;
 
@@ -20,20 +25,20 @@ public class MainActivity extends AppCompatActivity  implements DialogLogin.OnDi
         showLogin("");
     }
 
-    private void showLogin(String error){
-        FragmentManager fragmentManager= getSupportFragmentManager();
+    private void showLogin(String error) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
         dialogLogin = new DialogLogin().newInstance(error);
         dialogLogin.show(fragmentManager, "Login dialog");
     }
 
-    private void checklogin(){
-        String username = ((EditText)dialogLogin.getDialog().findViewById(R.id.editTextUsername)).getText().toString();
-        String password = ((EditText)dialogLogin.getDialog().findViewById(R.id.editTextPassword)).getText().toString();
+    private void checklogin() {
+        String username = ((EditText) dialogLogin.getDialog().findViewById(R.id.editTextUsername)).getText().toString();
+        String password = ((EditText) dialogLogin.getDialog().findViewById(R.id.editTextPassword)).getText().toString();
         Log.println(Log.DEBUG, "username", username);
         Log.println(Log.DEBUG, "password", password);
-        if(username.equals("usuario1") && password.equals("123456")){
+        if (username.equals("usuario1") && password.equals("123456")) {
             Log.println(Log.DEBUG, "BIEN", "Login correcto");
-        }else{
+        } else {
             Log.println(Log.DEBUG, "MAL", "Login incorrecto");
             showLogin("Datos incorrectos");
         }
@@ -49,5 +54,24 @@ public class MainActivity extends AppCompatActivity  implements DialogLogin.OnDi
         finish();
     }
 
+    public void openIndex() {
+        Intent intent = new Intent(this, index.class);
+        startActivity(intent);
+    }
 
+    public void salir(View view) {
+        new AlertDialog.Builder(this)
+            .setIcon(android.R.drawable.ic_dialog_alert)
+            .setTitle("Salir")
+            .setMessage("¿Estás seguro de querer salir de la aplicación?")
+            .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+
+            })
+            .setNegativeButton("No", null)
+            .show();
+    }
 }

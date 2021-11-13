@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EJ_UD02_Dialogos">
         <activity
+            android:name=".index"
+            android:exported="true"
+            android:label="@string/title_activity_index"
+            android:theme="@style/Theme.EJ_UD02_Dialogos.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

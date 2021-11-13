@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/mario/Desktop/PROM-Amaia/EJ_UD2_TabsYAppBar/app/src/main/res/layout/activity_main.xml" value="0.22685185185185186" />
+        <entry key="..\:/Users/mario/Desktop/PROM-Amaia/EJ_UD2_TabsYAppBar/app/src/main/res/layout/pestana_chats.xml" value="0.22685185185185186" />
+        <entry key="..\:/Users/mario/Desktop/PROM-Amaia/EJ_UD2_TabsYAppBar/app/src/main/res/layout/pestana_contactos.xml" value="0.22685185185185186" />
+        <entry key="..\:/Users/mario/Desktop/PROM-Amaia/EJ_UD2_TabsYAppBar/app/src/main/res/layout/pestana_llamadas.xml" value="0.22685185185185186" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.296195652173913" />
         <entry key="app/src/main/res/layout/activity_tabs_app_bar.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/layout/fragment_tabs_app_bar.xml" value="0.20416666666666666" />
