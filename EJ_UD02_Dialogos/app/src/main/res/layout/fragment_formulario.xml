@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentFormulario">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="Titulo:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewAutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Autor:"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextAutor"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitulo"
+        app:layout_constraintTop_toTopOf="@+id/editTextAutor" />
+
+    <EditText
+        android:id="@+id/editTextTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTitulo"
+        app:layout_constraintStart_toEndOf="@+id/textViewTitulo"
+        app:layout_constraintTop_toTopOf="@+id/textViewTitulo" />
+
+    <EditText
+        android:id="@+id/editTextAutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTitulo" />
+
+    <EditText
+        android:id="@+id/editTextGenero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextAutor"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAutor" />
+
+    <EditText
+        android:id="@+id/editTextSinopsis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/switchLehido"
+        app:layout_constraintTop_toBottomOf="@+id/switchLehido" />
+
+    <TextView
+        android:id="@+id/textViewGenero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genero"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextGenero"
+        app:layout_constraintStart_toStartOf="@+id/textViewAutor"
+        app:layout_constraintTop_toTopOf="@+id/editTextGenero" />
+
+    <TextView
+        android:id="@+id/textViewLehido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Lehido?"
+        app:layout_constraintBottom_toBottomOf="@+id/switchLehido"
+        app:layout_constraintStart_toStartOf="@+id/textViewGenero"
+        app:layout_constraintTop_toTopOf="@+id/switchLehido" />
+
+    <TextView
+        android:id="@+id/textViewSinopsis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sinopsis"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextSinopsis"
+        app:layout_constraintStart_toStartOf="@+id/textViewLehido"
+        app:layout_constraintTop_toTopOf="@+id/editTextSinopsis" />
+
+    <Switch
+        android:id="@+id/switchLehido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextGenero"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGenero" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSinopsis" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

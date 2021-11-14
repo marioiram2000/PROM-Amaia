@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/mario/Desktop/PROM-Amaia/EJ_UD02_Fragmentos/app/src/main/res/layout/activity_detalle.xml" value="0.25729166666666664" />
         <entry key="..\:/Users/mario/Desktop/PROM-Amaia/EJ_UD02_Fragmentos/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/mario/Desktop/PROM-Amaia/EJ_UD02_Fragmentos/app/src/main/res/layout/fragment_detalle.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/mario/Desktop/PROM-Amaia/EJ_UD02_Fragmentos/app/src/main/res/layout/fragment_listado.xml" value="0.25729166666666664" />
+        <entry key="..\:/Users/mario/Desktop/PROM-Amaia/EJ_UD02_Fragmentos/app/src/main/res/layout/listitem_libro.xml" value="0.25729166666666664" />
         <entry key="app/src/main/res/layout-large-port/activity_main.xml" value="0.153125" />
         <entry key="app/src/main/res/layout-large/activity_main.xml" value="0.2687841530054645" />
         <entry key="app/src/main/res/layout/activity_detalle.xml" value="0.35643115942028986" />

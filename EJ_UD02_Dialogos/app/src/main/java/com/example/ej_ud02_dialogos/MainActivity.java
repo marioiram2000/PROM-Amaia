@@ -1,18 +1,15 @@
 package com.example.ej_ud02_dialogos;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.location.Address;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements DialogLogin.OnDialogoConfirmacionListener {
 
@@ -54,8 +51,8 @@ public class MainActivity extends AppCompatActivity implements DialogLogin.OnDia
         finish();
     }
 
-    public void openIndex() {
-        Intent intent = new Intent(this, index.class);
+    public void openIndex(View view) {
+        Intent intent = new Intent(this, ActivityIndex.class);
         startActivity(intent);
     }
 
@@ -69,7 +66,6 @@ public class MainActivity extends AppCompatActivity implements DialogLogin.OnDia
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
                     }
-
                 });
         builder.setNegativeButton("No", null);
         builder.show();

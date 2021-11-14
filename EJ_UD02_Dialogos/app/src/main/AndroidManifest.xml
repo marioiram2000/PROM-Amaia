@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EJ_UD02_Dialogos">
         <activity
-            android:name=".index"
+            android:name=".ActivityDetalle"
+            android:exported="true" />
+        <activity
+            android:name=".ActivityIndex"
             android:exported="true"
             android:label="@string/title_activity_index"
             android:theme="@style/Theme.EJ_UD02_Dialogos.NoActionBar" />
