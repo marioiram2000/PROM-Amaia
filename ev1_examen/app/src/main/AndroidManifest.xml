@@ -10,7 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ev1_examen">
         <activity
+            android:name=".ActiviadadLocalidades"
+            android:exported="true" />
+        <activity
+            android:name=".ActividadEvaluar"
+            android:exported="true" />
+        <activity
+            android:name=".Actividad2"
+            android:exported="true" />
+        <activity
+            android:name=".Actividad1"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

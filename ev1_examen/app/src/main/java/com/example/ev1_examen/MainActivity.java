@@ -5,6 +5,8 @@ import androidx.fragment.app.FragmentManager;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -21,6 +23,10 @@ public class MainActivity extends AppCompatActivity implements DialogLogin.OnDia
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         showLogin();
+    }
+
+    public void onConfigurationChanged(Configuration config) {
+        super.onConfigurationChanged(config);
     }
 
     private void showLogin() {
@@ -83,10 +89,12 @@ public class MainActivity extends AppCompatActivity implements DialogLogin.OnDia
     }
 
     public void actividad1(View view){
-
+        Intent intent = new Intent(this, Actividad1.class);
+        startActivity(intent);
     }
 
     public void actividad2(View view){
-
+        Intent intent = new Intent(this, Actividad2.class);
+        startActivity(intent);
     }
 }
