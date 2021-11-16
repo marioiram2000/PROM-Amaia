@@ -22,9 +22,9 @@ public class FragmentListadoController extends Fragment implements LibroListener
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);/*
         FragmentListado fragmentListado = (FragmentListado) FragmentManager.findFragmentById(R.id.frgListado);
-        fragmentListado.setLibroListener(this);
+        fragmentListado.setLibroListener(this);*/
     }
 
     @Override
@@ -34,7 +34,7 @@ public class FragmentListadoController extends Fragment implements LibroListener
     }
 
     @Override
-    public void onLibroSeleccionado(Libro l) {
+    public void onLibroSeleccionado(Libro l) {/*
         boolean hayDetalle =
                 (getSupportFragmentManager().findFragmentById(R.id.frgDetalle)!= null);
         if (hayDetalle) {
@@ -46,6 +46,6 @@ public class FragmentListadoController extends Fragment implements LibroListener
             i.putExtra(ActivityDetalle.EXTRA_TEXTO, l.toString());
             i.putExtra("libro", l);
             startActivity(i);
-        }
+        }*/
     }
 }
