@@ -34,7 +34,8 @@ public class FragmentListadoController extends Fragment implements LibroListener
     }
 
     @Override
-    public void onLibroSeleccionado(Libro l) {/*
+    public void onLibroSeleccionado(Libro l) {
+        /*
         boolean hayDetalle =
                 (getSupportFragmentManager().findFragmentById(R.id.frgDetalle)!= null);
         if (hayDetalle) {
