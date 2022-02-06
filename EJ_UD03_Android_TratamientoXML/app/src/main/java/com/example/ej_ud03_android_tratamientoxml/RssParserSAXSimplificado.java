@@ -82,9 +82,7 @@ public class RssParserSAXSimplificado {
                 });
 
         try {
-            Xml.parse(this.getInputStream(),
-                    Xml.Encoding.UTF_8,
-                    root.getContentHandler());
+            Xml.parse(this.getInputStream(), Xml.Encoding.UTF_8, root.getContentHandler());
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

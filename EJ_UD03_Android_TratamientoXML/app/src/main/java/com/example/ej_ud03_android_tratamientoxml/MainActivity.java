@@ -31,8 +31,7 @@ public class MainActivity extends AppCompatActivity {
     //Tarea Asíncrona para cargar un XML en segundo plano
     private class CargarXmlTask extends AsyncTask<String, Integer, Boolean> {
         protected Boolean doInBackground(String... params) {
-            RssParserSAXSimplificado saxparserSimplificado =
-                    new RssParserSAXSimplificado(params[0]);
+            RssParserSAXSimplificado saxparserSimplificado = new RssParserSAXSimplificado(params[0]);
             noticias = saxparserSimplificado.parse();
             return true;
         }
