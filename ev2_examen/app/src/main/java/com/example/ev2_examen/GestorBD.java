@@ -42,16 +42,19 @@ public class GestorBD extends AppCompatActivity {
         }
     }
 
+    //Abrimos la nueva actividad de crear/modificar
     public void crearModificar(View v){
         Intent i = new Intent(this, CrearModificar.class);
         startActivity(i);
     }
 
+    //Abrimos la nueva actividad de crear facturas
     public void crearFacturas(View v){
         Intent i = new Intent(this, CrearFacturas.class);
         startActivity(i);
     }
 
+    //Abrimos la nueva actividad de consultar facturas
     public void consultarFacturas(View v){
         Intent i = new Intent(this, ConsultarFacturas.class);
         startActivity(i);
