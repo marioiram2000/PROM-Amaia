@@ -31,7 +31,7 @@ public class Parser {
         Tiempo tiempo = new Tiempo();
         RootElement root = new RootElement("data");
         Element dia = (Element) root.getChild("day1");
-        System.out.println(dia.getChild("date").toString());
+
         dia.setStartElementListener(new StartElementListener() {
             @Override
             public void start(Attributes attributes) {

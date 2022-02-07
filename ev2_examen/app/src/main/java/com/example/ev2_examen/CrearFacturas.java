@@ -18,6 +18,8 @@ public class CrearFacturas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_facturas);
+        SQLiteHelper helper = new SQLiteHelper(this, "DBExamen", null, 1);
+        db = helper.getWritableDatabase();
     }
 
     //Cuando le damos al boton submit
@@ -28,6 +30,7 @@ public class CrearFacturas extends AppCompatActivity {
         EditText edValor = findViewById(R.id.edTelefono);
 
         crear(edNum.getText().toString(), edDNI.getText().toString(), edConcepto.getText().toString(), edValor.getText().toString());
+        finish();
     }
 
     //Inserción de una factura
@@ -40,7 +43,7 @@ public class CrearFacturas extends AppCompatActivity {
             valores.put("concepto", concepto);
             valores.put("valor", valor);
 
-            db.insert("Clientes", null, valores);
+            db.insert("Facturas", null, valores);
         }
     }
 }
