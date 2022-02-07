@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
 public class GestorTiempo extends AppCompatActivity {
 
     public String url;
@@ -60,8 +64,10 @@ public class GestorTiempo extends AppCompatActivity {
             primerclick = false;
         }
 
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        Date date = new Date();
 
-        fecha.setText(getResources().getString(R.string.fecha_hora) + tiempo.getFecha());
+        fecha.setText(getResources().getString(R.string.fecha_hora) + formatter.format(date));
         temperatura.setText(getResources().getString(R.string.temperatura));
         cielo.setText(tiempo.getEstadocielo());
 

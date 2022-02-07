@@ -5,6 +5,7 @@ import android.sax.EndElementListener;
 import android.sax.EndTextElementListener;
 import android.sax.RootElement;
 import android.sax.StartElementListener;
+import android.util.Xml;
 
 
 import org.xml.sax.Attributes;
@@ -44,14 +45,6 @@ public class Parser {
             }
         });
 
-
-        dia.getChild("date").setEndTextElementListener(
-                new EndTextElementListener() {
-                    @Override
-                    public void end(String body) {
-                        tiempo.setFecha(body);
-                    }
-                });
         dia.getChild("temperature_max").setEndTextElementListener(
                 new EndTextElementListener() {
                     @Override
@@ -59,6 +52,7 @@ public class Parser {
                         tiempo.setTempmax(Integer.parseInt(body));
                     }
                 });
+
         dia.getChild("temperature_min").setEndTextElementListener(
                 new EndTextElementListener() {
                     @Override
@@ -71,6 +65,14 @@ public class Parser {
 //        private int icono;
 //        private String estadocielo;
 
+        Element horas = (Element) root.getChild("hour_hour");
+
+
+        try {
+            Xml.parse(this.getInputStream(), Xml.Encoding.UTF_8, root.getContentHandler());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         return tiempo;
 
