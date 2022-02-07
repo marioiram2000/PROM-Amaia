@@ -21,6 +21,7 @@ public class Parser {
     private final URL rssURL;
 
     public Parser(String url) {
+        //Ponemos el parametro de la url que nos han pasado
         try {
             this.rssURL = new URL(url);
         } catch (MalformedURLException e) {
@@ -29,22 +30,13 @@ public class Parser {
     }
 
     public Tiempo parse() {
+        //Obtenemos los datos que vamos a necesitar
         Tiempo tiempo = new Tiempo();
         RootElement root = new RootElement("data");
+
+        //Del elemento dia obtenemos las temperaturas mínima y maxima
+
         Element dia = (Element) root.getChild("day1");
-
-        dia.setStartElementListener(new StartElementListener() {
-            @Override
-            public void start(Attributes attributes) {
-                System.out.println("-----------------------------");
-            }
-        });
-        dia.setEndElementListener(new EndElementListener() {
-            @Override
-            public void end() {
-            }
-        });
-
         dia.getChild("temperature_max").setEndTextElementListener(
                 new EndTextElementListener() {
                     @Override
@@ -61,10 +53,8 @@ public class Parser {
                     }
                 });
 
-//        private int temp;
-//        private int icono;
-//        private String estadocielo;
 
+        //Del elemento hour1 obtenemos los datos de la hora actual
         Element horas = (Element) root.getChild("hour_hour");
         Element hora = horas.getChild("hour1");
         hora.getChild("temperature").setEndTextElementListener(
