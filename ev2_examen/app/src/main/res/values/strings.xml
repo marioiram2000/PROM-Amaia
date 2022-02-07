@@ -29,4 +29,7 @@
     <string name="tel_fono">Teléfono:</string>
     <string name="seleccione_el_cliente">Seleccione el cliente:</string>
     <string name="submit">Submit</string>
+    <string name="num">Num</string>
+    <string name="conceptodp">Concepto:</string>
+    <string name="valordp">Valor:</string>
 </resources>

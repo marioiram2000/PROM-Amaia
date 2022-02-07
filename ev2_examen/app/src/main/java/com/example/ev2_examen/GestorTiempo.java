@@ -44,6 +44,7 @@ public class GestorTiempo extends AppCompatActivity {
 
     }
 
+    //Cargamos el XML task
     private class CargarXmlTask extends AsyncTask<String, Integer, Boolean> {
 
         protected Boolean doInBackground(String... params) {
@@ -57,6 +58,7 @@ public class GestorTiempo extends AppCompatActivity {
         }
     }
 
+    //Cargamos los datos del xml
     public void cargarDatos(View view) {
         if (primerclick) {
             ciudad.setVisibility(View.VISIBLE);
@@ -135,6 +137,7 @@ public class GestorTiempo extends AppCompatActivity {
 
     }
 
+    //En el caso de que hayamos seleccionado bilbao
     public void bilbao(View view) {
         ciudad.setText(getResources().getString(R.string.tiempo_en) + " Bilbo-Bilbao");
         url = "https://api.tutiempo.net/xml/?lan=es&apid=qsTX4X4qq44as6Q&lid=8050";
@@ -142,6 +145,7 @@ public class GestorTiempo extends AppCompatActivity {
         task.execute(url);
     }
 
+    //En el caso de que hayamos seleccionado vitoria
     public void vitoria(View view) {
         ciudad.setText(getResources().getString(R.string.tiempo_en) + " Vitoria-Gasteiz");
         url = "https://api.tutiempo.net/xml/?lan=es&apid=qsTX4X4qq44as6Q&lid=8043";
@@ -149,6 +153,7 @@ public class GestorTiempo extends AppCompatActivity {
         task.execute(url);
     }
 
+    //En el caso de que hayamos seleccionado donosti
     public void donosti(View view) {
         ciudad.setText(getResources().getString(R.string.tiempo_en) + " Donostia-San Sebastian");
         url = "https://api.tutiempo.net/xml/?lan=es&apid=qsTX4X4qq44as6Q&lid=4917";
