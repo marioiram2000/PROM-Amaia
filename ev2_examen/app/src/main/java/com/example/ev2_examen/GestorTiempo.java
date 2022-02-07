@@ -68,7 +68,7 @@ public class GestorTiempo extends AppCompatActivity {
         Date date = new Date();
 
         fecha.setText(getResources().getString(R.string.fecha_hora) + formatter.format(date));
-        temperatura.setText(getResources().getString(R.string.temperatura));
+        temperatura.setText(getResources().getString(R.string.temperatura)+" (Min: "+tiempo.getTempmin()+" / Max:"+tiempo.getTempmax());
         cielo.setText(tiempo.getEstadocielo());
 
 
