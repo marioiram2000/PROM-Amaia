@@ -16,16 +16,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    //Al pulsar en el botón de gestionar la bd
     public void gestorBD(View v) {
         Intent i = new Intent(MainActivity.this, GestorBD.class);
         startActivity(i);
     }
 
+    //Al pulsar en el botón de gestionar el tiempo
     public void gestorTiempo(View v) {
         Intent i = new Intent(MainActivity.this, GestorTiempo.class);
         startActivity(i);
     }
 
+    //Al pulsar en el botón salir
     public void salir(View v) {
         new AlertDialog.Builder(this)
                 .setTitle("Salir")
