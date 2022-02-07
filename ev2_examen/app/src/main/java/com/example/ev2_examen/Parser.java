@@ -61,12 +61,33 @@ public class Parser {
                     }
                 });
 
-        //        private int temp;
+//        private int temp;
 //        private int icono;
 //        private String estadocielo;
 
         Element horas = (Element) root.getChild("hour_hour");
-
+        Element hora = horas.getChild("hour1");
+        hora.getChild("temperature").setEndTextElementListener(
+                new EndTextElementListener() {
+                    @Override
+                    public void end(String body) {
+                        tiempo.setTemp(Integer.parseInt(body));
+                    }
+                });
+        hora.getChild("text").setEndTextElementListener(
+                new EndTextElementListener() {
+                    @Override
+                    public void end(String body) {
+                        tiempo.setEstadocielo(body);
+                    }
+                });
+        hora.getChild("icon").setEndTextElementListener(
+                new EndTextElementListener() {
+                    @Override
+                    public void end(String body) {
+                        tiempo.setIcono(body);
+                    }
+                });
 
         try {
             Xml.parse(this.getInputStream(), Xml.Encoding.UTF_8, root.getContentHandler());

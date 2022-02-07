@@ -10,7 +10,7 @@ public class Tiempo {
     private int temp;
     private int tempmin;
     private int tempmax;
-    private int icono;
+    private String icono;
     private String estadocielo;
 
     public Tiempo() {
@@ -58,5 +58,23 @@ public class Tiempo {
         this.tempmax = tempmax;
     }
 
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
 
+    public int getTemp() {
+        return temp;
+    }
+
+    public void setTemp(int temp) {
+        this.temp = temp;
+    }
+
+    public String getIcono() {
+        return icono;
+    }
+
+    public void setIcono(String icono) {
+        this.icono = icono;
+    }
 }
