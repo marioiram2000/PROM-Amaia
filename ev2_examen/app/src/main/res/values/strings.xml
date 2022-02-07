@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">ev2_examen</string>
+    <string name="abrir_gestor_del_tiempo">Abrir gestor del tiempo</string>
+    <string name="abrir_gestor_de_base_de_datos">Abrir gestor de base de datos</string>
+    <string name="salir">Salir</string>
+    <string name="bien_venido_al_gestor_de_la_base_de_datos">Bien venido al gestor de la base de datos</string>
+    <string name="consultar_facturas">Consultar Facturas</string>
+    <string name="crear_facturas">Crear Facturas</string>
+    <string name="crear_modificar_clientes">Crear / Modificar Clientes</string>
+    <string name="el_tiempo">El Tiempo</string>
+    <string name="escoge_una_de_las_siguientes_localidades">Escoge una de las siguientes localidades</string>
+    <string name="bilbo_bilbao">Bilbo-bilbao</string>
+    <string name="vitoria_gasteiz">Vitoria-gasteiz</string>
+    <string name="volver">Volver</string>
+    <string name="donostia_san_sebastian">Donostia-san sebastian</string>
+    <string name="tiempo_en">Tiempo en:</string>
+    <string name="fecha_hora">FECHA / HORA:</string>
+    <string name="temperatura">TEMPERATURA:</string>
+    <string name="todo">TODO</string>
+    <string name="num_fac">Num Fac</string>
+    <string name="dni">Dni</string>
+    <string name="nombre">Nombre</string>
+    <string name="concepto">Concepto</string>
+    <string name="valor">Valor</string>
+    <string name="introduce_los_datos">Introduce los datos</string>
+    <string name="dniMayus">DNI:</string>
+    <string name="nombredp">Nombre:</string>
+    <string name="direccion">Direccion:</string>
+    <string name="tel_fono">Teléfono:</string>
+    <string name="seleccione_el_cliente">Seleccione el cliente:</string>
+    <string name="submit">Submit</string>
+</resources>
